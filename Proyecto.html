@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cajero Automático</title>
+  <style>
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; 
+        margin: 0; 
+        font-family: Arial, Helvetica, sans-serif;
+        background-image: url('https://www.bbva.mx/content/dam/public-web/mexico/photos/fondo-home-core-marquee.im1591229613327im.jpg?imwidth=3200');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+
+    input, button {
+      font-size: 16px;
+      padding: 10px;
+      margin: 10px;
+      cursor: pointer;
+      border-radius: 30px;
+    }
+
+    button {
+        background-color: #eee;
+;
+        
+    }
+
+    img {
+        position: absolute;
+        height: 20%;
+        top: 0px;
+        filter: brightness(0) invert(1);
+
+        
+
+    }
+
+    #seleccionCuenta {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        justify-content: center;
+        text-align: center;
+        padding: 30px;
+        border-radius: 30px;
+    }
+
+    button:hover {
+        background-color: #eee;
+    }
+
+    #operaciones {
+        background-color: white;
+        text-align: center;
+        padding: 6%;
+        border-radius: 30px;
+    }
+
+    #operaciones_h2 {
+        position: absolute;
+        top:0;
+
+    }
+
+  </style>
+   <script
+    src="Proyecto.js">
+  </script>
+</head>
+<body>
+
+  <img src="https://1000marcas.net/wp-content/uploads/2019/12/BBVA-logo-768x438.png">
+
+  <div id="seleccionCuenta">
+    <input id="cuenta" type="text" placeholder="Ingrese su cuenta">
+    <br>
+    <input id="password" type="password" placeholder="Ingrese su contraseña">
+    <br>
+    <button id="iniciar" onclick="iniciarSesion()" style="color: white" >Iniciar Sesión</button>
+    
+  </div>
+
+  <div id="operaciones" style="display: none;">
+    <h2>Operaciones Disponibles</h2>
+    <button onclick="consultarSaldo()">Consultar Saldo</button>
+    <button onclick="ingresarMonto()">Ingresar Monto</button>
+    <button onclick="retirarMonto()">Retirar Monto</button>
+  </div>
+
+
+   
+</body>
+
+
+</html>
